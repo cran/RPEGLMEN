@@ -1,9 +1,8 @@
 #' @useDynLib RPEGLMEN, .registration = TRUE
 #' @importFrom Rcpp evalCpp
 NULL
-#'
-#' @import stats
-#' @import utils
+#' @importFrom stats dgamma optim sd
+#' @importFrom utils head tail
 #' @import RPEIF
 #' @import PerformanceAnalytics
 
@@ -84,9 +83,9 @@ NULL
 #' colnames(edhec)
 #' 
 #' # Computing the expected shortfall for the time series of returns
-#' library(RPEIF)
-#' test.mat <- apply(edhec, 2, IF.ES)
-#' test.mat <- apply(test.mat, 2, as.numeric)
+#' # library(RPEIF)
+#' # test.mat <- apply(edhec, 2, IF.ES)
+#' # test.mat <- apply(test.mat, 2, as.numeric)
 #' 
 #' # Returning the standard errors from the Gamma distribution fit
 #' # apply(test.mat, 2, SE.Gamma)

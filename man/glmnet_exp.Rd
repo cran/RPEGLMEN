@@ -4,10 +4,21 @@
 \alias{glmnet_exp}
 \title{Elastic Net Penalized Exponentially Distributed Response Variables}
 \usage{
-glmnet_exp(A, b, alpha.EN = 0.5, num_lambda = 100L, glm_type = 1L,
-  max_iter = 100L, abs_tol = 1e-04, rel_tol = 0.01,
-  normalize_grad = FALSE, k_fold = 5L, has_intercept = TRUE,
-  k_fold_iter = 5L, ...)
+glmnet_exp(
+  A,
+  b,
+  alpha.EN = 0.5,
+  num_lambda = 100L,
+  glm_type = 1L,
+  max_iter = 100L,
+  abs_tol = 1e-04,
+  rel_tol = 0.01,
+  normalize_grad = FALSE,
+  k_fold = 5L,
+  has_intercept = TRUE,
+  k_fold_iter = 5L,
+  ...
+)
 }
 \arguments{
 \item{A}{The matrix of independent variables.}
@@ -92,12 +103,12 @@ data(edhec, package = "PerformanceAnalytics")
 colnames(edhec)
 
 # Computing the expected shortfall for the time series of returns
-library(RPEIF)
-test.mat <- apply(edhec, 2, IF.ES)
-test.mat <- apply(test.mat, 2, as.numeric)
+# library(RPEIF)
+# test.mat <- apply(edhec, 2, IF.ES)
+# test.mat <- apply(test.mat, 2, as.numeric)
 
 # Returning the standard errors from the Exponential distribution fit
-apply(test.mat, 2, SE.Exponential)
+# apply(test.mat, 2, SE.Exponential)
 
 }
 \author{
