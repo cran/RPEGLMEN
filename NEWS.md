@@ -12,3 +12,6 @@
 
 # RPEGLMEN 1.1.2
 * Remove system requirements (C++11)
+
+# RPEGLMEN 1.1.3
+* Fixed bashisms in configure files.
